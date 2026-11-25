@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Now showing | CineBook</title>
+  <meta name="description" content="Book movie tickets online with CineBook.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8E%AC%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./css/variables.css">
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/layout.css">
+  <link rel="stylesheet" href="./css/components.css">
+  <link rel="stylesheet" href="./css/pages.css">
+</head>
+<body>
+  <header id="navbar"></header>
+  <main class="container" id="main">
+    <section class="hero-slider" id="hero" aria-roledescription="carousel" aria-label="Featured movies">
+      <div class="slide active">
+        <div class="slide-inner">
+          <div class="slide-text">
+            <h1>Pick a film. Pick your seat.</h1>
+            <p>Browse what is playing near you, choose exact seats on the map and get your ticket instantly.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="tabs" role="tablist" aria-label="Movie status" id="statusTabs">
+      <button class="tab" role="tab" data-status="now-showing" aria-selected="true">Now showing</button>
+      <button class="tab" role="tab" data-status="upcoming" aria-selected="false">Coming soon</button>
+      <button class="tab" role="tab" data-status="" aria-selected="false">All</button>
+    </div>
+
+    <div class="filters">
+      <input class="search" type="search" id="search" placeholder="Search by title" aria-label="Search movies">
+      <select id="genre" aria-label="Genre"><option value="">All genres</option></select>
+      <select id="language" aria-label="Language"><option value="">All languages</option></select>
+      <select id="sort" aria-label="Sort">
+        <option value="-releaseDate">Newest first</option>
+        <option value="title">Title A-Z</option>
+        <option value="duration">Shortest first</option>
+      </select>
+    </div>
+
+    <div id="movieGrid" class="grid-movies" aria-live="polite"></div>
+    <div id="pagination" class="pagination"></div>
+  </main>
+  <footer id="footer"></footer>
+  <script type="module" src="./js/pages/home.js"></script>
+</body>
+</html>

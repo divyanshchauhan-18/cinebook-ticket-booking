@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Log in | CineBook</title>
+  <meta name="description" content="Book movie tickets online with CineBook.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8E%AC%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/pages.css">
+</head>
+<body>
+  <header id="navbar"></header>
+  <main class="container" id="main">
+    <div class="narrow">
+      <h1>Welcome back</h1>
+      <form id="loginForm" class="card" novalidate>
+        <div class="form-error hidden" role="alert"></div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" required>
+          <span class="err" data-err="email"></span>
+        </div>
+        <div class="field">
+          <label for="password">Password</label>
+          <div class="password-wrap">
+            <input id="password" name="password" type="password" autocomplete="current-password" required>
+            <button type="button" aria-label="Show or hide password">Show</button>
+          </div>
+          <span class="err" data-err="password"></span>
+        </div>
+        <button class="btn btn-block" type="submit">Log in</button>
+        <p class="muted" style="margin:1rem 0 0">New here? <a href="register.html">Create an account</a></p>
+        <p class="muted hint" style="margin:.5rem 0 0;font-size:.85rem">Demo: user@demo.com / User@1234 &middot; admin@demo.com / Admin@123 (after running the seed script)</p>
+      </form>
+    </div>
+  </main>
+  <footer id="footer"></footer>
+  <script type="module" src="../js/pages/login.js"></script>
+</body>
+</html>
