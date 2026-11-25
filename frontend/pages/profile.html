@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Profile | CineBook</title>
+  <meta name="description" content="Book movie tickets online with CineBook.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8E%AC%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/pages.css">
+</head>
+<body>
+  <header id="navbar"></header>
+  <main class="container" id="main">
+    <div class="page-head"><h1>Your profile</h1></div>
+    <div class="admin-two" style="grid-template-columns:1fr">
+      <div class="grid-two" style="display:grid;gap:1.5rem;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))">
+        <form id="profileForm" class="card" novalidate>
+          <h2>Details</h2>
+          <div class="form-error hidden" role="alert"></div>
+          <div class="field"><label for="email">Email</label><input id="email" disabled></div>
+          <div class="field"><label for="name">Name</label><input id="name" name="name" required minlength="2"><span class="err" data-err="name"></span></div>
+          <div class="field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel"><span class="err" data-err="phone"></span></div>
+          <button class="btn" type="submit">Save changes</button>
+        </form>
+        <form id="passwordForm" class="card" novalidate>
+          <h2>Change password</h2>
+          <div class="form-error hidden" role="alert"></div>
+          <div class="field"><label for="currentPassword">Current password</label><input id="currentPassword" name="currentPassword" type="password" autocomplete="current-password" required><span class="err" data-err="currentPassword"></span></div>
+          <div class="field"><label for="newPassword">New password</label><input id="newPassword" name="newPassword" type="password" autocomplete="new-password" minlength="8" required><span class="err" data-err="newPassword"></span></div>
+          <button class="btn" type="submit">Update password</button>
+        </form>
+      </div>
+    </div>
+  </main>
+  <footer id="footer"></footer>
+  <script type="module" src="../js/pages/profile.js"></script>
+</body>
+</html>

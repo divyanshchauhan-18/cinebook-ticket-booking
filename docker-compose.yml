@@ -1,0 +1,18 @@
+# Run everything locally: docker compose up --build
+services:
+  mongo:
+    image: mongo:7
+    volumes: [mongo-data:/data/db]
+  app:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    ports: ["5000:5000"]
+    environment:
+      MONGO_URI: mongodb://mongo:27017/cinebook
+      JWT_SECRET: change_me_to_a_long_random_string_for_real_use
+      CLIENT_URL: http://localhost:5000
+      NODE_ENV: production
+    depends_on: [mongo]
+volumes:
+  mongo-data:
