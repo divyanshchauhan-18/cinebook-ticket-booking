@@ -1,3 +1,6 @@
+<img width="1244" height="679" alt="file47" src="https://github.com/user-attachments/assets/1a6f78a0-2a99-4366-8fcf-0f4efd52999b" />
+<img width="1241" height="624" alt="file46" src="https://github.com/user-attachments/assets/749ae482-3752-4cef-8b40-5c88d613284d" />
+<img width="1246" height="498" alt="file44" src="https://github.com/user-attachments/assets/dc3a40ca-0732-4df4-bd95-d2d249d98617" />
 # CineBook - Movie Ticket Booking (Full-Stack MERN-style)
 
 Browse movies, pick showtimes, choose exact seats on a live seat map and get a ticket with a booking code. Admins manage movies, theatres, shows, bookings and users, and see sales stats.
